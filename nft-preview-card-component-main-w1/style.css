@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+
+    --main-bg: hsl(300, 100%, 93%);
+    --card-bg: rgb(200, 184, 255);
+    --line: hsl(215, 32%, 27%);
+    --darksteelname: hsl(263, 100%, 73%);
+}
+
+img {
+    max-width: 100%;
+    border-radius: 0.5rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+p {
+    font-weight: 300;
+}
+
+body {
+    font-family: "Outfit", sans-serif;
+    font-size: 18px;
+    background-color: var(--main-bg);
+    padding: 1.25rem;
+}
+
+.container {
+    padding: 1.25rem;
+    background-color: var(--card-bg);
+    border-radius: 0.5rem;
+    box-shadow: 0px 20px 30px 5px rgba(20, 19, 19, 0.596);
+}
+
+/* box-shadow: 0px 30px 5px 15px rgba(0, 0, 0, 0.125),  0px 30px 10px 50px rgba(0, 0, 0, 0.035); */
+
+.container .main-image {
+    position: relative;
+}
+
+.container .main-image div {
+    position: absolute;
+    background-color: hsl(300, 100%, 93%, 60%);
+    top: 0;
+    width: 100%;
+    height: calc(100% - 4px);
+    border-radius: 0.5rem;
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.container .main-image div:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.container .main-image div img {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, 50%);
+    height: 96px;
+    width: 96px;
+    opacity: 50%;
+}
+
+
+.container h2 {
+    color: hsl(263, 100%, 73%);
+    margin: 1rem 0.5rem 0.5rem 0;
+}
+
+.container h2 span {
+    color: rgb(255, 126, 154);
+    font-size: large;
+}
+
+.container ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.container ul li {
+    display: flex;
+    align-items: center;
+}
+
+
+/* .container ul li:first-child {
+    color: var(--cyan);
+} */
+
+.container ul li img {
+    margin-right: 0.5rem;
+    color:hsl(263, 100%, 73%)
+}
+
+.container .photo {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-top: 1rem;
+}
+
+.container .photo img {
+    width: 100px;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    margin: auto;
+}
+
+.container h3 {
+    text-align: center;
+    margin-top: 12px;
+}
+
+.container h3 p span {
+    color:rgb(255, 218, 255);
+    font-weight: 400;
+}
+
+.container h3 p span:hover {
+    color:rgb(255, 126, 154);
+    cursor: pointer;
+}
+
+
+.attribution a {
+    font-size: 12px;
+    text-align: center;
+}
+
+a.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 500px) {
+    .container {
+        width: 450px;
+        margin: 0 auto 1rem;
+    }
+}
